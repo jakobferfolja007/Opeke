@@ -5,19 +5,20 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #e6e6e6;
+  background: radial-gradient(circle at top, #0b0f2a, #000000);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: white;
 }
 
 /* GLAVNI OKVIR */
 .outer {
   width: 1100px;
   height: 700px;
-  background: #efefef;
-  border: 3px solid black;
+  background: rgba(10, 10, 30, 0.9);
+  border: 2px solid #00ffff;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -28,7 +29,9 @@ body {
   text-align: center;
   font-weight: bold;
   margin-bottom: 10px;
-  border: black 2px solid;
+  border-bottom: #00ffff 2px solid;
+  padding: 5px;
+  font-size: 20px;
 }
 
 /* ČAS + TOČKE */
@@ -50,15 +53,25 @@ body {
   flex-direction: column;
 }
 
-/* CANVAS CONTAINER */
+/* GAME */
 .game {
-  
-  background: rgb(255, 255, 255);
+  background: black;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  position: relative;
+  overflow: hidden;
+}
+
+/* STAR BACKGROUND */
+.game::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:#0b0f2a;
+  opacity: 0.4;
 }
 
 /* SPODNJA VRSTICA */
@@ -77,20 +90,24 @@ body {
 
 button {
   padding: 5px 14px;
-  border: 2px solid black;
-  background: #e0e0e0;
+  border: 2px solid #00ffff;
+  background: #111;
+  color: #00ffff;
   cursor: pointer;
 }
 
 button:hover {
-  background: #d0d0d0;
+  background: #00ffff;
+  color: black;
 }
 
 /* DESNI PANEL */
 .results {
-  border: 2px solid black;
-  background: white;
+  border: 2px solid #00ffff;
+  background: rgba(0,0,0,0.8);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .results-title {
@@ -98,7 +115,14 @@ button:hover {
   margin-bottom: 10px;
 }
 
-/* LOGO TEXT */
-.logo {
-  font-size: 13px;
+#rezultati {
+  list-style: none;
+  padding-left: 0;
+  flex:1;
+}
+
+#rezultati li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 5px;
 }
