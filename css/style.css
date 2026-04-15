@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* GLAVNI OKVIR */
+.outer {
+  width: 1100px;
+  height: 700px;
+  background: #efefef;
+  border: 3px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border: black 2px solid;
+}
+
+/* ČAS + TOČKE */
+.time-row {
+  margin-bottom: 10px; 
+  font-size: 14px;
+}
+
+/* GRID */
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  gap: 15px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CANVAS CONTAINER */
+.game {
+  
+  background: rgb(255, 255, 255);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* SPODNJA VRSTICA */
+.bottom-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* GUMBI */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  padding: 5px 14px;
+  border: 2px solid black;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d0d0d0;
+}
+
+/* DESNI PANEL */
+.results {
+  border: 2px solid black;
+  background: white;
+  padding: 10px;
+}
+
+.results-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* LOGO TEXT */
+.logo {
+  font-size: 13px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<title>The Bricks</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jQuery.js"></script>
+</head>
+
+<body onload="drawIt()">
+
+<div class="outer">
+
+  <!-- HEADER -->
+  <div class="header">
+    The Bricks
+  </div>
+
+  <!-- ČAS + TOČKE -->
+  <div class="time-row">
+    Čas: <span id="cas">00:00</span> |
+    Točke: <span id="tocke">0</span>
+  </div>
+
+  <div class="main">
+
+    <div class="left-side">
+
+      <!-- GAME AREA -->
+      <div class="game">
+        <canvas id="canvas" width="800" height="400"></canvas>
+      </div>
+
+      <!-- GUMBI -->
+      <div class="bottom-row">
+        <div class="logo">The Bricks</div>
+
+        <div class="buttons">
+          <button onclick="location.reload()">Restart</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DESNI PANEL -->
+    <div class="results">
+      <div class="results-title">Rezultati</div>
+      <ul id="rezultati"></ul>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
